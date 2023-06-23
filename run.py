@@ -25,3 +25,29 @@ def view_tasks(tasks):
     for i, task in enumerate(tasks):
         status = "Complete" if task["complete"] else "Incomplete"
         print(f"{i}. {task['description']} - {status}")
+
+
+# Main
+def main():
+    tasks = []
+    while True:
+        print("\n--- To-Do List Menu ---")
+        print("1. Add Task")
+        print("2. Mark Task as Complete")
+        print("3. View Tasks")
+        print("4. Exit")
+    
+    choice = input("Enter your choice (1-4): ")
+
+    if choice == "1":
+        add_task(tasks)
+    elif choice == "2":
+        mark_task_complete(tasks)
+    elif choice == "3":
+        view_tasks(tasks)
+    elif choice == "4":
+        print("Exiting...")
+        break
+    else:
+        print("Invalid choice. Please try again.")
+
