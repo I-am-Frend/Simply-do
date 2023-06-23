@@ -30,24 +30,30 @@ def view_tasks(tasks):
 # Main
 def main():
     tasks = []
+    options = {
+        "1": add_task,
+        "2": mark_task_complete,
+        "3": view_tasks,
+        "4": lambda _: print("Exiting...")
+    }
+
     while True:
         print("\n--- To-Do List Menu ---")
         print("1. Add Task")
         print("2. Mark Task as Complete")
         print("3. View Tasks")
         print("4. Exit")
-    
-    choice = input("Enter your choice (1-4): ")
 
-    if choice == "1":
-        add_task(tasks)
-    elif choice == "2":
-        mark_task_complete(tasks)
-    elif choice == "3":
-        view_tasks(tasks)
-    elif choice == "4":
-        print("Exiting...")
-        break
-    else:
-        print("Invalid choice. Please try again.")
+        choice = input("Enter your choice (1-4): ")
+        action = options.get(choice)
+        if action:
+            action(tasks)
+        else:
+            print("Invalid choice. Please try again.")
+            continue
 
+        if choice == "4":
+            break
+
+if __name__ == "__main__":
+    main()
