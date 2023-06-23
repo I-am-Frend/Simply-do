@@ -20,3 +20,8 @@ def mark_task_complete(tasks):
         print("Invalid task index.")
 
 
+# Task Viewer
+def view_tasks(tasks):
+    for i, task in enumerate(tasks):
+        status = "Complete" if task["complete"] else "Incomplete"
+        print(f"{i}. {task['description']} - {status}")
