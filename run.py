@@ -18,7 +18,7 @@ def mark_task_complete(tasks):
     """
     print("Tasks:")
     view_tasks(tasks)
-    index = int(input("Enter the index of the task to mark as complete: "))
+    index = int(input("Enter the index of the task to mark as complete:\n "))
     if 0 <= index < len(tasks):
         tasks[index]["complete"] = True
         print("Task marked as complete!")
@@ -43,10 +43,10 @@ def edit_task(tasks):
     or the task it self has changed.
     """
     print(tasks)
-    index = int(input("Enter the index of the task to edit: "))
+    index = int(input("Enter the index of the task to edit:\n"))
     if 0 <= index < len(tasks):
         task = tasks[index]
-        new_description = input("Enter new task description: ")
+        new_description = input("Enter new task description:\n")
         task["description"] = new_description
         print("Task edited successfully!")
     else:
@@ -60,7 +60,7 @@ def delete_task(tasks):
     """
     print("Tasks:")
     view_tasks(tasks)
-    index = int(input("Enter the index of the task to delete: "))
+    index = int(input("Enter the index of the task to delete:\n"))
     if 0 <= index < len(tasks):
         del tasks[index]
         print("Task deleted successfully!")
@@ -91,7 +91,7 @@ def main():
         print("5. Delete Task")
         print("6. Exit\n")
 
-        choice = input("Enter your choice (1-6): ")
+        choice = input("Enter your choice (1-6):\n")
         action = options.get(choice)
         if action:
             action(tasks)
