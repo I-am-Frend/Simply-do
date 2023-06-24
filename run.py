@@ -38,6 +38,10 @@ def view_tasks(tasks):
 
 # Edit Tasks
 def edit_task(tasks):
+    """
+    A way to Edit tasks if a spelling error occured, 
+    or the task it self has changed.
+    """
     print(tasks)
     index = int(input("Enter the index of the task to edit: "))
     if 0 <= index < len(tasks):
@@ -51,6 +55,9 @@ def edit_task(tasks):
 
 # Delete Tasks
 def delete_task(tasks):
+    """
+    A function to Delete tasks if they are not needed
+    """
     print("Tasks:")
     view_tasks(tasks)
     index = int(input("Enter the index of the task to delete: "))
