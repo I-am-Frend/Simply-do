@@ -1,4 +1,6 @@
-# Simple To-do list
+"""
+Simple To-do list
+"""
 # Made by Frend
 
 # Task Input
@@ -39,18 +41,26 @@ def view_tasks(tasks):
 # Edit Tasks
 def edit_task(tasks):
     """
-    A way to Edit tasks if a spelling error occured, 
+    A way to Edit tasks if a spelling error occurred, 
     or the task it self has changed.
     """
-    print(tasks)
-    index = int(input("Enter the index of the task to edit:\n"))
-    if 0 <= index < len(tasks):
-        task = tasks[index]
-        new_description = input("Enter new task description:\n")
-        task["description"] = new_description
-        print("Task edited successfully!")
-    else:
-        print("Invalid task index.")
+    print("Tasks:")
+    choice_made = False
+    while not choice_made:
+        view_tasks(tasks)
+        index = input("Enter the index of the task to edit:\n")
+        if index.isdigit():
+            index = int(index)
+            if 0 <= index < len(tasks):
+                task = tasks[index]
+                new_description = input("Enter new task description:\n")
+                task["description"] = new_description
+                print("Task edited successfully!")
+                choice_made = True
+            else:
+                print("Invalid task index.")
+        else:
+            print("Invalid task index. Should be an integer.\n")
 
 
 # Delete Tasks
@@ -59,13 +69,20 @@ def delete_task(tasks):
     A function to Delete tasks if they are not needed
     """
     print("Tasks:")
-    view_tasks(tasks)
-    index = int(input("Enter the index of the task to delete:\n"))
-    if 0 <= index < len(tasks):
-        del tasks[index]
-        print("Task deleted successfully!")
-    else:
-        print("Invalid task index.")
+    choice_made = False
+    while not choice_made:
+        view_tasks(tasks)
+        index = input("Enter the index of the task to delete:\n")
+        if index.isdigit():
+            index = int(index)
+            if 0 <= index < len(tasks):
+                del tasks[index]
+                print("Task deleted successfully!")
+                choice_made = True
+            else:
+                print("Invalid task index.")
+        else:
+            print("Invalid task index. Should be an integer.\n")
 
 # Main
 def main():
