@@ -93,8 +93,6 @@ The application was tested manually during the whole development process. All te
 
 ### Credits
 
-- 
-
 - Sticky notes for giving me the inspiration to make an To-Do list in Python
 
 - The template for running the application in the mock terminal in the browser was provided by [Code Institute](https://www.codeinstitute.net/).
