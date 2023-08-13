@@ -47,6 +47,21 @@ def mark_task_complete(tasks):
             if index.isdigit():
                 index = int(index)
                 if 0 <= index < len(tasks):
+                    tasks[index]["complete"] = True
+                    print_clear()
+                    print(term.green + "Task marked as complete!")
+                    choice_made = True
+                else:
+                    print_clear()
+                    print(term.red + "Invalid task index.")
+            elif index.lower() == 'q':
+                choice_made = True
+            else:
+                print_clear()
+                print(term.red + "Invalid task index. Should be an integer.\n")
+    else:
+        print_clear()
+        print(term.red + "There are no tasks. Please add some.")
 
 
 # Task Viewer
