@@ -98,23 +98,26 @@ def main():
 
     menu = TerminalMenu(options, title="To-do manager")
     while True:
-        print("\n--- To-Do List Menu ---")
-        print("1. Add Task")
-        print("2. Mark Task as Complete")
-        print("3. View Tasks")
-        print("4. Edit Task")
-        print("5. Delete Task")
-        print("6. Exit\n")
-
-        choice = input("Enter your choice (1-6):\n")
-        action = options.get(choice)
-        if action:
-            action(tasks)
+        print(term.normal)
+        choice = menu.show()
+        if choice != None:
+            if options[choice] == "Add task":
+                add_task(tasks)
+            elif options[choice] == "Mark task complete":
+                mark_task_complete(tasks)
+            elif options[choice] == "View tasks":
+                view_tasks(tasks)
+            elif options[choice] == "Edit task":
+                edit_task(tasks)
+            elif options[choice] == "Delete task":
+                delete_task(tasks)
+            else:
+                print("Exiting....")
+                break
         else:
-            print("Invalid choice. Please try again.")
-            continue
+            choice = -1
 
-        if choice == "6":
+if choice == "6":
             break
 
 
