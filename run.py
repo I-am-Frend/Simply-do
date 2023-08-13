@@ -72,21 +72,15 @@ def delete_task(tasks):
     """
     A function to Delete tasks if they are not needed
     """
-    print("Tasks:")
-    choice_made = False
-    while not choice_made:
-        view_tasks(tasks)
-        index = input("Enter the index of the task to delete:\n")
-        if index.isdigit():
-            index = int(index)
-            if 0 <= index < len(tasks):
-                del tasks[index]
-                print("Task deleted successfully!")
-                choice_made = True
-            else:
-                print("Invalid task index.")
-        else:
-            print("Invalid task index. Should be an integer.\n")
+    if check_empty(tasks):
+        print(term.blue + "Tasks:" + term.normal)
+        choice_made = False
+        while not choice_made:
+            view_tasks(tasks)
+            print(term.yellow + "q. Press 'q' to go back" + term.normal)
+            index = input("Enter the index of the task to delete:\n")
+            if index.isdigit():
+                
 
 # Main
 def main():
@@ -119,7 +113,6 @@ def main():
 
 if choice == "6":
             break
-
 
 if __name__ == "__main__":
     main()
