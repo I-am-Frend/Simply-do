@@ -5,6 +5,7 @@ from simple_term_menu import TerminalMenu
 from blessed import Terminal
 
 # Made by Frend
+term = Terminal()
 
 # Task Input
 def add_task(tasks):
@@ -93,15 +94,9 @@ def main():
     Runs all functions and a simple menu
     """
     tasks = []
-    options = {
-        "1": add_task,
-        "2": mark_task_complete,
-        "3": view_tasks,
-        "4": edit_task,
-        "5": delete_task,
-        "6": lambda _: print("Exiting...")
-    }
+    options = ["Add task", "Mark task Complete", "View task", "Edit task", "Delete task", "Exit"]
 
+    menu = TerminalMenu(options, title="To-do manager")
     while True:
         print("\n--- To-Do List Menu ---")
         print("1. Add Task")
