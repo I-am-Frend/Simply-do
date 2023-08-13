@@ -102,6 +102,14 @@ def edit_task(tasks):
                 else:
                     print_clear()
                     print(term.red + "Invalid task index." + term.normal)
+            elif index.lower() == 'q':
+                choice_made = True
+            else:
+                print_clear()
+                print(term.red + "Invalid task index. Should be an integer.\n" + term.normal)
+    else:
+        print_clear()
+        print(term.red + "There are no tasks" + term.normal)
 
 
 # Delete Tasks
@@ -166,6 +174,7 @@ def main():
 
 if choice == "6":
             break
+
 
 if __name__ == "__main__":
     main()
