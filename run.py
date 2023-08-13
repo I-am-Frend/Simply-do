@@ -24,6 +24,12 @@ def add_task(tasks):
     tasks.append({"description": task, "complete": False})
     print(term.green + "Task added successfully!")
 
+# Checks for empty tasks
+def check_empty(tasks):
+    """
+    Checks for empty tasks
+    """
+    return len(tasks) > 0
 
 # Mark the task as complete
 def mark_task_complete(tasks):
