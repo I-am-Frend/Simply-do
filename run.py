@@ -36,14 +36,17 @@ def mark_task_complete(tasks):
     """
     Marks the selected task as complete on the list.
     """
-    print("Tasks:")
-    view_tasks(tasks)
-    index = int(input("Enter the index of the task to mark as complete:\n "))
-    if 0 <= index < len(tasks):
-        tasks[index]["complete"] = True
-        print("Task marked as complete!")
-    else:
-        print("Invalid task index.")
+    if check_empty(tasks):
+        print_clear()
+        print(term.blue + "Tasks:" + term.normal)
+        choice_made = False
+        while not choice_made:
+            view_tasks(tasks)
+            print(term.yellow + "q. Press 'q' to go back" + term.normal)
+            index = input("Enter the index of the task to mark as complete:\n ")
+            if index.isdigit():
+                index = int(index)
+                if 0 <= index < len(tasks):
 
 
 # Task Viewer
