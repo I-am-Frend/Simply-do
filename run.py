@@ -84,23 +84,24 @@ def edit_task(tasks):
     A way to Edit tasks if a spelling error occurred, 
     or the task it self has changed.
     """
-    print("Tasks:")
-    choice_made = False
-    while not choice_made:
-        view_tasks(tasks)
-        index = input("Enter the index of the task to edit:\n")
-        if index.isdigit():
-            index = int(index)
-            if 0 <= index < len(tasks):
-                task = tasks[index]
-                new_description = input("Enter new task description:\n")
-                task["description"] = new_description
-                print("Task edited successfully!")
-                choice_made = True
-            else:
-                print("Invalid task index.")
-        else:
-            print("Invalid task index. Should be an integer.\n")
+    if check_empty(tasks):
+        print(term.blue + "Tasks:" + term.normal)
+        choice_made = False
+        while not choice_made:
+            view_tasks(tasks)
+            print(term.yellow + "q. Press 'q' to go back" + term.normal)
+            index = input("Enter the index of the task to edit:\n")
+            if index.isdigit():
+                index = int(index)
+                if 0 <= index < len(tasks):
+                    task = tasks[index]
+                    new_description = input("Enter new task description:\n")
+                    print_clear()
+                    print(term.green + "Task edited successfully!" + term.normal)
+                    choice_made = True
+                else:
+                    print_clear()
+                    print(term.red + "Invalid task index." + term.normal)
 
 
 # Delete Tasks
