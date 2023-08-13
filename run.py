@@ -7,14 +7,22 @@ from blessed import Terminal
 # Made by Frend
 term = Terminal()
 
+# Print Clear
+def print_clear():
+    """
+    Clears the prints in the terminal
+    """
+    print(term.home + term.clear)
+
 # Task Input
 def add_task(tasks):
     """
     Adds tasks to an list
     """
+    print_clear()
     task = input("Enter task description: ")
     tasks.append({"description": task, "complete": False})
-    print("Task added successfully!")
+    print(term.green + "Task added successfully!")
 
 
 # Mark the task as complete
