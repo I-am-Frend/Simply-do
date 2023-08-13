@@ -80,7 +80,23 @@ def delete_task(tasks):
             print(term.yellow + "q. Press 'q' to go back" + term.normal)
             index = input("Enter the index of the task to delete:\n")
             if index.isdigit():
-                
+                index = int(index)
+                if 0 <= index < len(tasks):
+                    del tasks[index]
+                    print_clear()
+                    print(term.green + "Task deleted successfully!" + term.normal)
+                    choice_made = True
+                else:
+                    print_clear()
+                    print(term.red + "Invalid task index." + term.normal)
+            elif index.lower() == 'q':
+                choice_made = True
+            else:
+                print_clear()
+                print(term.red + "Invalid task index. Should be an integer.\n" + term.normal)
+    else:
+        print_clear()
+        print(term.red + "There are no tasks" + term.normal)
 
 # Main
 def main():
