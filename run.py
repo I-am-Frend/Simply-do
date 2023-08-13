@@ -69,9 +69,13 @@ def view_tasks(tasks):
     """
     Function to check if the task in question is complete or not.
     """
-    for i, task in enumerate(tasks):
-        status = "Complete" if task["complete"] else "Incomplete"
-        print(f"{i}. {task['description']} - {status}")
+    if check_empty(tasks):
+        for i, task in enumerate(tasks):
+            status = "Complete" if task["complete"] else "Incomplete"
+            print(term.yellow + f"{i}. {task['description']} - {status}" + term.normal)
+    else:
+        print_clear()
+        print(term.red + "There are no tasks" + term.normal)
 
 
 # Edit Tasks
