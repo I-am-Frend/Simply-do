@@ -173,7 +173,7 @@ def main():
             choice = -1
 
 if choice == "6":
-            break
+    break
 
 
 if __name__ == "__main__":
