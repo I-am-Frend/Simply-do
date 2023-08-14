@@ -143,7 +143,7 @@ def delete_task(tasks):
                 print(term.red + "Invalid task index. Should be an integer.\n" + term.normal)
     else:
         print_clear()
-        print(term.red + "There are no tasks. Please add some" + term.normal)
+        print(term.red + "There are no tasks. Please add some." + term.normal)
 
 # Main
 def main():
@@ -151,7 +151,7 @@ def main():
     Runs all functions and a simple menu
     """
     tasks = []
-    options = ["Add task", "Mark task Complete", "View task", "Edit task", "Delete task", "Exit"]
+    options = ["Add task", "Mark task as Complete", "View tasks", "Edit task", "Delete task", "Exit"]
 
     menu = TerminalMenu(options, title="To-do manager")
     while True:
@@ -160,7 +160,7 @@ def main():
         if choice != None:
             if options[choice] == "Add task":
                 add_task(tasks)
-            elif options[choice] == "Mark task complete":
+            elif options[choice] == "Mark task as Complete":
                 mark_task_complete(tasks)
             elif options[choice] == "View tasks":
                 view_tasks(tasks)
