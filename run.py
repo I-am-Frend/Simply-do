@@ -37,7 +37,7 @@ def mark_task_complete(tasks):
     Marks the selected task as complete on the list.
     """
     if check_empty(tasks):
-        print_clear()
+        print_clear()       
         print(term.blue + "Tasks:" + term.normal)
         choice_made = False
         while not choice_made:
@@ -45,7 +45,7 @@ def mark_task_complete(tasks):
             print(term.yellow + "q. Press 'q' to go back" + term.normal)
             index = input("Enter the index of the task to mark as complete:\n ")
             if index.isdigit():
-                index = int(index)
+                index = int(index)                
                 if 0 <= index < len(tasks):
                     tasks[index]["complete"] = True
                     print_clear()
@@ -53,11 +53,13 @@ def mark_task_complete(tasks):
                     choice_made = True
                 else:
                     print_clear()
+
                     print(term.red + "Invalid task index.")
             elif index.lower() == 'q':
                 choice_made = True
             else:
                 print_clear()
+
                 print(term.red + "Invalid task index. Should be an integer.\n")
     else:
         print_clear()
@@ -109,7 +111,7 @@ def edit_task(tasks):
                 print(term.red + "Invalid task index. Should be an integer.\n" + term.normal)
     else:
         print_clear()
-        print(term.red + "There are no tasks" + term.normal)
+        print(term.red + "There are no tasks. Please add some." + term.normal)
 
 
 # Delete Tasks
@@ -141,7 +143,7 @@ def delete_task(tasks):
                 print(term.red + "Invalid task index. Should be an integer.\n" + term.normal)
     else:
         print_clear()
-        print(term.red + "There are no tasks" + term.normal)
+        print(term.red + "There are no tasks. Please add some" + term.normal)
 
 # Main
 def main():
