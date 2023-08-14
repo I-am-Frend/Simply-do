@@ -172,8 +172,8 @@ def main():
         else:
             choice = -1
 
-if choice == "6":
-    break
+        if choice == "6":
+            break
 
 
 if __name__ == "__main__":
