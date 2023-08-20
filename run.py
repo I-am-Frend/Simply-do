@@ -87,6 +87,7 @@ def edit_task(tasks):
     or the task it self has changed.
     """
     if check_empty(tasks):
+        print_clear()
         print(term.blue + "Tasks:" + term.normal)
         choice_made = False
         while not choice_made:
@@ -120,6 +121,7 @@ def delete_task(tasks):
     A function to Delete tasks if they are not needed
     """
     if check_empty(tasks):
+        print_clear()
         print(term.blue + "Tasks:" + term.normal)
         choice_made = False
         while not choice_made:
