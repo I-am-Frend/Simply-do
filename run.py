@@ -8,7 +8,7 @@ from blessed import Terminal
 term = Terminal()
 messages = []
 
-
+# Print Clear
 def print_clear():
     """
     Clears the screen
@@ -28,15 +28,15 @@ def add_task(tasks):
     print_clear()
 
 
+# Empty Tasks
 def check_empty(tasks):
     """
     Checks if there are tasks
     """
     return len(tasks) > 0
 
+
 # Mark the task as complete
-
-
 def toggle_task_status(tasks):
     """
     Marks the selected task as complete on the list.
