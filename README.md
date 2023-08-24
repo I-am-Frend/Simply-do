@@ -17,6 +17,8 @@ Under the welcome message, the user can see the main menu and can take immediate
 
 ![Main menu screenshot](assets/docs/main-menu.png)
 
+- ##### 
+
 ---
 
 ### Technologies used
