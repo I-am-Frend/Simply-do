@@ -27,6 +27,9 @@ In this menu you can view the tasks that have been should be marked as complete,
 
 ![Mark Task as Complete screenshot](assets/docs/mark-task-as-complete.png)
 
+- ##### Delete and Edit tasks
+Mostly the same for the two other menues too, color was added to increase accessibility.
+
 ---
 
 ### Technologies used
@@ -51,7 +54,7 @@ The application was tested manually during the whole development process. All te
 
 ###### Validator results
 
-[Python Checker](https://www.pythonchecker.com) was used to check the code for meeting PEP8 requirements. No warnings or errors were found. The results of the validator are in the screenshots below.
+[Python Checker](https://pep8ci.herokuapp.com/#) was used to check the code for meeting PEP8 requirements. There are minor warnings being shown, but the code runs fine. The results of the validator are in the screenshots below.
 
 - `run.py`:
 
