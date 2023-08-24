@@ -7,7 +7,7 @@
 
 1. Open this [link](https://simple-todo-34e0e06a5416.herokuapp.com) or copy it from here: `https://simple-todo-34e0e06a5416.herokuapp.com`, paste it into your browser's address bar, and press enter.
 2. When the page is loaded, click the "RUN PROGRAM" button.
-3. Add tasks using the 1 - 6 number keys either on the keyboard or the numberpad.
+3. Add tasks using the keyboard to input tasks and navigate the menu using the arrow keys.
 
 ---
 

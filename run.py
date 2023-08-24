@@ -73,6 +73,7 @@ def view_tasks(tasks):
     """
     if check_empty(tasks):
         for i, task in enumerate(tasks):
+            print_clear()
             status = "Complete" if task["complete"] else "Incomplete"
             print(term.yellow + f"{i}. {task['description']} - {status}" + term.normal)
     else:
