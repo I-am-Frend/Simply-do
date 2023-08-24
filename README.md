@@ -17,7 +17,15 @@ Under the welcome message, the user can see the main menu and can take immediate
 
 ![Main menu screenshot](assets/docs/main-menu.png)
 
-- ##### 
+- ##### Adding tasks.
+This feature lets you add tasks, and it is now colorized to improve accessability.
+
+![Add Task screenshot](assets/docs/adding-tasks.png)
+
+- ##### Mark Tasks as Complete
+In this menu you can view the tasks that have been should be marked as complete, and inputing the corresponding number to mark it as complete.
+
+![Mark Task as Complete screenshot](assets/docs/mark-task-as-complete.png)
 
 ---
 
@@ -38,6 +46,8 @@ Under the welcome message, the user can see the main menu and can take immediate
 
 ### Testing
 The application was tested manually during the whole development process. All testing occurred in the IDE that Codeanywhere provides.
+
+- There was a few application breaking bugs inside of my prior code, to fix the issues I looked up a simple menu package and started using that.
 
 ###### Validator results
 
