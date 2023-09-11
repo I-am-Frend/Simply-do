@@ -13,7 +13,7 @@
 
 ### Features
 - ##### Main menu.
-Under the welcome message, the user can see the main menu and can take immediate action by inputing the corresponding number, allowing them to easily set up the list of tasks that need to be done.
+Under the main menu message, the user can see the main menu and can take immediate action by inputing the corresponding number, allowing them to easily set up the list of tasks that need to be done.
 
 ![Main menu screenshot](assets/docs/main-menu.png)
 
@@ -22,10 +22,10 @@ This feature lets you add tasks, and it is now colorized to improve accessabilit
 
 ![Add Task screenshot](assets/docs/adding-tasks.png)
 
-- ##### Mark Tasks as Complete
-In this menu you can view the tasks that have been should be marked as complete, and inputing the corresponding number to mark it as complete.
+- ##### Toggle Task Status
+In this menu you can view the tasks that have been should be marked as complete, and inputing the corresponding number to mark it as complete or incomplete if you change your mind.
 
-![Mark Task as Complete screenshot](assets/docs/mark-task-as-complete.png)
+![Toggle Task Status screenshot](assets/docs/mark-task-as-complete.png)
 
 - ##### Delete and Edit tasks
 Mostly the same for the two other menues too, color was added to increase accessibility.
@@ -40,6 +40,10 @@ Mostly the same for the two other menues too, color was added to increase access
 - [JavaScript](https://www.javascript.com/): The language used by the Code Institute to run the mock terminal in the browser.
 - [HTML](https://www.w3schools.com/html/): The language used by the Code Institute to create the layout needed to run the mock terminal in the browser.
 
+###### Frameworks, libraries, and packages
+- [blessed](https://pypi.org/project/blessed/): used to manipulate the terminal output.
+- [simple-term-menu](https://pypi.org/project/simple-term-menu/): used to create the terminal menu for the application.
+
 ###### Other tools
 - [GitHub](https://github.com/): used to host the application source code.
 - [Codeanywhere](https://codeanywhere.com): used to edit the application source code.
@@ -50,7 +54,20 @@ Mostly the same for the two other menues too, color was added to increase access
 ### Testing
 The application was tested manually during the whole development process. All testing occurred in the IDE that Codeanywhere provides.
 
-- There was a few application breaking bugs inside of my prior code, to fix the issues I looked up a simple menu package and started using that.
+---
+
+### Bugs and issues
+
+- ##### Solved bugs
+- Application would break when trying to exit the View Tasks menu
+    - This was solved by rewriting the code using the Simple Menu Package
+- Application would break when trying to edit tasks incorrectly
+    - Fixed issue via restructuring of code
+
+- ##### Unsolved bugs
+- No unsolved bugs
+
+---
 
 ###### Validator results
 
